@@ -21,6 +21,7 @@ for (let i = 0; i < liTagElem.length; i++)
      */ 
 
 // Write the code as shown in the video below:
+/*
 const mainHeading = document.querySelector("#main-heading");
 mainHeading.style.textAlign = "right";
 
@@ -49,4 +50,31 @@ for (let i = 0; i < fruit.length; i++)
     }
     fruit[i].style.borderRadius = "5px";
 }
-// Write answer to the questions asked below:
+    */
+// Write answer to the questions asked below: 
+// Write your code below:
+const divs = document.getElementsByTagName("div");
+const headDiv = divs[0];
+const secDiv = divs[1];
+
+//sub-heading,textnode
+const subheading = document.createElement("h3"); 
+const subtextnode = document.createTextNode("Buy high quality organic fruits online");
+
+//append textnode into sub-heading
+subheading.appendChild(subtextnode);
+subheading.style.fontStyle = "italic";
+//now append this into headDiv and let it be the part of dom
+headDiv.appendChild(subheading); 
+
+//para tag ,paratext
+const para = document.createElement("p");
+para.id = "fruits-total";
+const paratext = document.createTextNode("Total fruits: 4");
+//append paratext into para
+para.appendChild(paratext);
+//append this into second div before.....
+//select unorderedList
+const fruits = document.querySelector(".fruits");
+secDiv.insertBefore(para, fruits);
+
